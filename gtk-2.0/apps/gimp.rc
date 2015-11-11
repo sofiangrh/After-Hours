@@ -1,0 +1,92 @@
+# ==============================================================================
+# Synaptic specific settings
+# ==============================================================================
+
+style "gimp-viewport"
+{
+	bg[NORMAL]	= shade (1.08, @bg_color)
+}
+
+style "gimp-statusbar"
+{
+	xthickness	= 0
+	ythickness	= 0
+}
+
+style "gimp-statusbar-frame"
+{
+	engine "murrine"
+	{
+		contrast	= 0.0
+	}
+}
+
+style "gimp-tooldialog-frame"
+{
+	xthickness	= 0
+	ythickness	= 0
+
+	bg[NORMAL]	= shade (1.024, @bg_color)
+
+	engine "murrine"
+	{
+		contrast	= 0.0
+	}
+}
+
+style "gimp-tooldialog-histogram"
+{
+	engine "murrine"
+	{
+		contrast	= 0.48
+	}
+}
+
+style "gimp-separator"
+{
+	bg[NORMAL]	= shade (1.04, @bg_color)
+
+	engine "murrine"
+	{
+		contrast	= 0.64
+		roundness	= 0
+	}
+}
+
+style "gimp-ruler"
+{
+	fg[NORMAL]	= shade (0.24, @base_color)
+
+	xthickness	= 4
+	ythickness	= 4
+
+	engine "murrine"
+	{
+		contrast	= 0.0
+	}
+}
+
+widget	"*gimp-dock-*.GtkScrolledWindow.GtkViewport"	style "gimp-viewport"
+widget	"*GimpStatusbar.*.GtkProgressBar"				style "gimp-statusbar"
+widget	"*GimpStatusbar.GtkFrame"						style "gimp-statusbar-frame"
+widget	"*GimpToolDialog.GtkVBox.GtkFrame*"				style "gimp-tooldialog-frame"
+widget	"*GimpViewableDialog.GtkVBox.GtkFrame*"			style "gimp-tooldialog-frame"
+
+widget	"*GimpHistogramBox.GtkFrame*"	style "gimp-tooldialog-histogram"
+widget	"*GimpDockSeparator*"			style "gimp-separator"
+widget	"*GimpRuler*"					style "gimp-ruler"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

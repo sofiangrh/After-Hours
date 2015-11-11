@@ -1,0 +1,10 @@
+# ==============================================================================
+# GNOME NET TOOL SPECIFIC SETTINGS
+# ==============================================================================
+
+style "nettool-ping-graph"
+{
+	bg[NORMAL]		= @base_color
+}
+
+widget "*ping_graph*"	style "nettool-ping-graph"

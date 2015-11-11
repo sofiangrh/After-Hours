@@ -1,0 +1,36 @@
+# ==============================================================================
+# BRASERO SPECIFIC SETTINGS
+# ==============================================================================
+
+style "brasero-preview-frame"
+{
+	xthickness = 0
+	ythickness = 0
+
+	bg[NORMAL]	= shade (0.98, @bg_color)
+
+	engine "murrine"
+	{
+		contrast	= 0.0
+	}
+}
+
+style "brasero-preview-label"
+{
+	font_name = "0"
+}
+
+style "brasero-projectmanager"
+{
+	bg[NORMAL]	= @bg_color
+}
+
+#widget	"*BraseroPreview.GtkFrame"	style "brasero-preview-frame"
+#widget	"*BraseroPreview.GtkFrame.GtkLabel"	style "brasero-preview-label"
+
+widget	"*BraseroProjectTypeChooser"	style "brasero-projectmanager"
+
+
+
+
+

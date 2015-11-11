@@ -1,0 +1,30 @@
+# ==============================================================================
+# EYE OF GNOME SPECIFIC SETTINGS
+# ==============================================================================
+
+style "eog-frame"
+{
+	xthickness	= 0
+	ythickness	= 0
+}
+
+style "eog-statusbar"
+{
+	EogStatusbar	::shadow_type	= GTK_SHADOW_NONE
+
+	xthickness	= 3
+	ythickness	= 3
+}
+
+widget	"EogWindow.GtkVBox.GtkVBox.*.GtkFrame"	style "eog-frame"
+widget	"*EogStatusbar*"						style "eog-statusbar"
+
+#widget	"*FullscreenToolbar*"					style "theme-button"
+
+
+
+
+
+
+
+

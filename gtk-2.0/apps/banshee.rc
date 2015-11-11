@@ -1,0 +1,36 @@
+# ==============================================================================
+# BANSHEE SPECIFIC SETTINGS
+# ==============================================================================
+
+style "banshee-scrolledwindow"
+{
+	GtkScrolledWindow	::scrollbar-spacing		= 2
+	GtkScrolledWindow	::scrollbars-within-bevel	= 0
+}
+
+style "banshee-scrollbar"
+{
+	GtkScrollbar	::stepper-size	= 16
+
+	engine "murrine"
+	{
+		roundness	= 3
+	}
+}
+
+widget	"*gtksharp*Player*crolled*"	style "banshee-scrolledwindow"
+widget	"*gtksharp*Player*croll?ar*"	style "banshee-scrollbar"
+
+
+
+
+
+
+
+
+
+
+
+
+
+

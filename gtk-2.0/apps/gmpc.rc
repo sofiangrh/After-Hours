@@ -1,0 +1,139 @@
+# ==============================================================================
+# GMPC SPECIFIC SETTINGS
+# ==============================================================================
+
+#style "gmpc-eventbox"
+#{
+#	bg[NORMAL]	= @selected_bg_color
+
+#	base[ACTIVE]	= shade (1.08, @selected_bg_color) #bar bg
+#	fg[INSENSITIVE]	= shade (0.62,@selected_bg_color) #bar fg insensitive
+
+##	fg[PRELIGHT]	= @text_color #button fg
+##	fg[SELECTED]	= @base_color #bar fg
+
+#	engine "murrine"
+#	{
+#		gradient_shades		= { 1.0, 0.9, 0.9, 0.8 }
+#		glow_shade			= 1.0
+#		contrast			= 1.1
+#		glazestyle			= 0
+#		highlight_shade		= 1.0
+#		lightborder_shade	= 1.0
+#		lightborderstyle	= 1
+#		roundness			= 2
+#	}
+#}
+
+#widget	"pl3_win*hbox44.frame14.vbox28.plugin_label_box*"						style "gmpc-eventbox"
+#widget	"pl3_win*browser_container.gtk_scrolled_window.GtkVBox.GtkEventBox*"	style "gmpc-eventbox"
+
+# ==============================================================================
+
+style "gmpc-browser-scrolled"
+{
+	GtkScrolledWindow	::scrollbar-spacing		= 0
+	GtkScrolledWindow	::scrollbars-within-bevel	= 1
+}
+
+style "gmpc-browser-frame"
+{
+	xthickness	= 3
+	ythickness	= 3
+
+	engine "murrine"
+	{
+		contrast	= 1.16
+
+	}
+}
+
+style "gmpc-clicklabel"
+{
+	fg[NORMAL]	= shade (0.56, @base_color)
+}
+
+style "gmpc-eventbox"
+{
+	bg[NORMAL]	= @selected_bg_color
+
+	base[ACTIVE]	= shade (1.08, @selected_bg_color) #bar bg
+	fg[INSENSITIVE]	= shade (0.62,@selected_bg_color) #bar fg insensitive
+
+#	fg[PRELIGHT]	= @text_color #button fg
+#	fg[SELECTED]	= @base_color #bar fg
+
+	engine "murrine"
+	{
+		gradient_shades		= { 1.0, 0.9, 0.9, 0.8 }
+		glow_shade			= 1.0
+		contrast			= 1.1
+		glazestyle			= 0
+		highlight_shade		= 1.0
+		lightborder_shade	= 1.0
+		lightborderstyle	= 1
+		roundness			= 2
+	}
+}
+
+style "gmpc-eventbox-dark" = "gmpc-eventbox"
+{
+	base[ACTIVE]	= shade (1.0, @selected_bg_color) #bar bg
+	fg[INSENSITIVE]	= shade (0.6,@selected_bg_color) #bar fg insensitive
+}
+
+widget	"pl3_win*"			style "theme-dark"
+widget	"pl3_win*menubar1*"	style "theme-menubar"
+
+widget	"pl3_win*crolled*"			style "theme-scrolled"
+widget	"pl3_win*ntry*"				style "theme-entry"
+widget	"pl3_win*utton*"			style "theme-button"
+widget	"pl3_win*ree?iew>*"			style "theme-tree"
+widget	"pl3_win*ree?iew*utton*"	style "theme-tree-header"
+widget	"pl3_win*croll?ar*"			style "theme-scrollbar"
+widget	"pl3_win*cale*"				style "theme-scale"
+widget	"pl3_win*rogress?ar*"		style "theme-progressbar"
+widget	"pl3_win*error_event*"		style "theme-default"
+
+widget	"*browser_container.gtk_scrolled_window"	style "gmpc-browser-frame"
+widget	"*browser_container.gtk_scrolled_window.*"	style "gmpc-browser-scrolled"
+
+widget	"*hbox44.frame14.vbox28.plugin_label_box*"						style "gmpc-eventbox"
+widget	"*browser_container.gtk_scrolled_window.GtkVBox.GtkEventBox*"	style "gmpc-eventbox-dark"
+
+widget	"pl3_win*vbox6.hbox10.GtkVBox.GmpcClickLabel*"			style "gmpc-clicklabel"
+widget	"pl3_win*vbox6.hbox10.GtkVBox.GtkHBox.GmpcClickLabel*"	style "gmpc-clicklabel"
+
+widget	"pl3_win*ExoWrapTable*"	style "theme-default"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

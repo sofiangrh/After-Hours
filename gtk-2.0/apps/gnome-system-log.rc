@@ -1,0 +1,63 @@
+# ==============================================================================
+# GNOME SYSTEM LOG SPECIFIC SETTINGS
+# ==============================================================================
+
+style "logview-main" = "theme-default"
+{
+#	bg[NORMAL]	= shade (0.8, "#3c3c3c")
+}
+
+style "logview-menubar" = "theme-menubar"
+{
+	engine "murrine"
+	{
+		contrast	= 0.74
+	}
+}
+
+style "logview-findbar"
+{
+	GtkToolbar	::shadow_type	= GTK_SHADOW_NONE
+
+	engine	"murrine"
+	{
+		toolbarstyle	= 0
+	}
+}
+
+style "logview-statusbar"
+{
+	xthickness	= 4
+	ythickness	= 4
+
+}
+
+widget	"LogviewWindow*"				style "logview-main"
+widget	"LogviewWindow.*"				style "theme-default"
+widget	"LogviewWindow*LogviewMenu"		style "logview-menubar"
+widget	"LogviewWindow*LogviewMenu.*"	style "theme-menubar"
+widget	"LogviewWindow*croll?ar*"		style "theme-scrollbar"
+widget	"LogviewWindow*utton*"			style "theme-button"
+widget	"*LogviewFindbar*"				style "logview-findbar"
+widget	"LogviewWindow*MessageArea*"	style "theme-default"
+widget	"LogviewWindow*GtkStatusbar*"	style "logview-statusbar"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

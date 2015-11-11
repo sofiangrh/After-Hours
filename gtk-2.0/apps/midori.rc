@@ -1,0 +1,51 @@
+# ==============================================================================
+# MIDORI SPECIFIC SETTINGS
+# ==============================================================================
+
+style "midori-scrolled"
+{
+	GtkScrolledWindow	::scrollbar-spacing		= 2
+	GtkScrolledWindow	::scrollbars-within-bevel	= 0
+
+	engine "murrine"
+	{
+		contrast	= 1.0
+	}
+}
+
+style "midori-panel-toolbar"
+{
+	GtkToolbar	::shadow_type	= GTK_SHADOW_NONE
+}
+
+widget	"MidoriBrowser.*crolled?indow*"				style "midori-scrolled"
+widget	"MidoriBrowser.*.MidoriPanel.*.GtkToolbar"	style "midori-panel-toolbar"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

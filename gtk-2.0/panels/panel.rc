@@ -1,0 +1,63 @@
+# ------------------------------------------------------------------------------
+# Panels specific settings
+# ------------------------------------------------------------------------------
+
+style "theme-panel" = "theme-dark-button"
+{
+	bg_pixmap[NORMAL]	= "/panels/panel-bg-dark.png"
+}
+
+style "theme-pixmap-applet" = "theme-menubar"
+{
+	bg_pixmap[NORMAL]	= "/panels/panel-bg-dark.png"
+}
+
+style "bold-panel-menu"
+{
+	font_name = "Bold"
+}
+
+widget "*Panel*MenuBar*" style "bold-panel-menu"
+
+class	"PanelApp*"			style "theme-panel"
+class	"PanelToplevel*"	style "theme-panel"
+
+widget_class	"*PanelToplevel*"	style "theme-panel"
+
+widget_class	"*notif*"				style "theme-panel"
+widget_class	"*Notif*"				style "theme-panel"
+widget_class	"*Tray*"				style "theme-panel"
+widget_class	"*tray*"				style "theme-panel"
+widget_class	"*Applet*Tomboy*"		style "theme-panel"
+widget_class	"*Applet*Netstatus*"	style "theme-panel"
+
+widget	"*PanelWidget*"			style "theme-panel"
+widget	"*PanelApplet*"			style "theme-panel"
+widget	"*CPUFreq*Applet*"		style "theme-panel"
+
+widget	"PanelToplevel.*.PanelMenuBar*"					style "theme-menubar"
+widget	"PanelToplevel*utton*"							style "theme-dark-button"
+widget	"PanelToplevel.*.window-menu-applet-button*"	style "theme-menubar"
+
+widget	"*fast-user-switch*"	style "theme-pixmap-applet"
+widget	"*indicator-applet*"	style "theme-pixmap-applet"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=After Hours
+Comment=After Hours Theme
+Encoding=UTF-8
+
+Name[en_CA]=After Hours
+
+[X-GNOME-Metatheme]
+GtkTheme=After Hours
+MetacityTheme=After Hours
+IconTheme=gnome-human
+CursorTheme=DMZ-White

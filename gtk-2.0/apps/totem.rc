@@ -1,0 +1,78 @@
+# ------------------------------------------------------------------------------
+# Totem specific settings
+# ------------------------------------------------------------------------------
+
+style "totem-main" = "theme-default"
+{
+	TotemStatusbar	::shadow-type	= GTK_SHADOW_NONE
+}
+
+style "totem-sidebar-viewport"
+{
+	xthickness	= 1
+	ythickness	= 1
+
+	engine "murrine"
+	{
+		contrast	= 0.68
+	}
+}
+
+style "totem-sidebar-scrolled"
+{
+	xthickness	= 1
+	ythickness	= 1
+}
+
+style "totem-fs"
+{
+	xthickness	= 0
+	ythickness	= 0
+}
+
+style "totem-fs-exit"
+{
+	engine "murrine"
+	{
+		roundness		= 0
+		contrast		= 0.0
+		gradient_shades	= {1.0, 1.0, 1.0, 1.0}
+	}
+}
+
+widget	"totem_*_window*"				style "totem-main"
+widget	"totem_*_window.*.*menubar*"	style "theme-menubar"
+
+widget	"totem_*_window.*.*book*"			style "theme-notebook"
+widget	"totem_*_window.*.*ree?iew*"		style "theme-tree"
+widget	"totem_*_window.*.*ContentView*"	style "theme-tree"
+
+widget	"totem_*_window.*.*crolled?indow*"				style "totem-sidebar-scrolled"
+widget	"totem_*_window.*.*crolled?indow*.*iew?ort*"	style "totem-sidebar-viewport"
+
+widget	"totem_*_window.*.*croll?ar*"		style "theme-scrollbar"
+widget	"totem_*_window.*.*ree?iew*utton*"	style "theme-tree-header"
+widget	"totem_*_window.*.*scale*"			style "theme-scale"
+widget	"totem_*_window.*.*rogress*?ar*"	style "theme-progressbar"
+widget	"totem_*_window.*.*utton*"			style "theme-button"
+widget	"totem_*_window.*.*ombo*"			style "theme-button"
+
+widget	"totem_exit_fullscreen_window"		style "totem-fs"
+widget	"totem_exit_fullscreen_window.*"	style "totem-fs-exit"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

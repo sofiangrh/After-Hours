@@ -1,0 +1,14 @@
+# ==============================================================================
+# GNOME TERMINAL SPECIFIC SETTINGS
+# ==============================================================================
+
+widget	"*TerminalWindow*"									style "theme-default"
+widget	"*TerminalWindow.*.*enu?ar*"						style "theme-menubar"
+widget	"*TerminalWindow.*.GtkNotebook*"					style "theme-notebook"
+widget	"*TerminalWindow.*.GtkNotebook.*.GtkVScrollbar*"	style "theme-scrollbar"
+widget	"*TerminalWindow.*.GtkNotebook.*.GtkButton*"		style "theme-button"
+
+
+
+
+

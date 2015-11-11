@@ -1,0 +1,71 @@
+# ==============================================================================
+# EVOLUTION SPECIFIC SETTINGS
+# ==============================================================================
+
+style "evo-toolbar" = "theme-button"
+{
+	engine	"murrine"
+	{
+		toolbarstyle	= 0
+		contrast		= 0.0
+	}
+}
+
+style "evo-toolbar-in" = "theme-button"
+{
+	engine	"murrine"
+	{
+		contrast	= 1.0
+	}
+}
+
+style "evo-infolabel"
+{
+	bg[ACTIVE]	= shade (1.2, @selected_bg_color)
+}
+
+style "evo-tree-header" = "theme-tree-header"
+{
+	xthickness	= 3
+	ythickness	= 3
+
+	engine	"murrine"
+	{
+		roundness	= 0
+	}
+}
+
+style "evo-taskbar"
+{
+	bg[NORMAL]	= @bg_color
+
+	engine	"murrine"
+	{
+		contrast	= 0.0
+	}
+}
+
+widget_class	"*.ETree.ECanvas"	style "evo-tree-header"
+widget_class	"*.ETable.ECanvas"	style "evo-tree-header"
+
+widget	"*EInfoLabel*"	style "evo-infolabel"
+widget	"EShellWindow.*.ETaskBar*"	style "evo-taskbar"
+
+widget	"EShellWindow.*.InternalToolbar"	style "evo-toolbar"
+widget	"EShellWindow.*.InternalToolbar.*"	style "evo-toolbar-in"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

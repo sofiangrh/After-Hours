@@ -1,0 +1,20 @@
+# ==============================================================================
+# CCSM SPECIFIC SETTINGS
+# ==============================================================================
+
+style "ccsm-colored-label"
+{
+	bg[SELECTED]	= mix (0.4, shade (0.2, @base_color), @selected_bg_color)
+}
+
+# ------------------------------------------------------------------------------
+# Normaly we can't modify a widget if its name is not unequivocal for that
+# application (e.g. "EogStatusbar") or if there isn't one up in the hierarchy
+# (e.g. "NautilusNavigationWindow"), but it seems that "selected bg" color for
+# a label widget is not so usual
+# ------------------------------------------------------------------------------
+
+widget	"*GtkLabel*"	style "ccsm-colored-label"
+
+
+

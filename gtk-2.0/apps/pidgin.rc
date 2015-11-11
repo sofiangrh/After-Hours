@@ -1,0 +1,45 @@
+# ==============================================================================
+# PIDGIN SPECIFIC SETTINGS
+# ==============================================================================
+
+style "pidgin-hseparator"
+{
+	bg[NORMAL]	= @base_color
+}
+
+style "pidgin-treeview"
+{
+	bg[NORMAL]	= @base_color
+}
+
+style "pidgin-chat-window"
+{
+	xthickness	= 2
+	ythickness	= 2
+
+	bg[NORMAL]	= shade (1.12, @bg_color)
+
+	engine "murrine"
+	{
+		contrast	= 1.08
+	}
+}
+
+widget	"*pidgin_conv_imhtml.*"		style "pidgin-hseparator"
+widget	"*pidgin_blist_treeview*"	style "pidgin-treeview"
+
+# ------------------------------------------------------------------------------
+# Following is not optimal, other apps can match this rule
+# ------------------------------------------------------------------------------
+
+widget	"GtkWindow.GtkVBox.GtkNotebook.GtkVBox.GtkVBox.GtkFrame"	style "pidgin-chat-window"
+
+
+
+
+
+
+
+
+
+

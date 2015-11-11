@@ -1,0 +1,128 @@
+# ==============================================================================
+# OpenOffice.org specific settings
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# This file is read automatically by OOo applications only if ooo.sh script was
+# executed by the user
+# You can test this by typing the following in a terminal:
+# env GTK2_RC_FILES=/usr/share/themes/Wasp/gtk-2.0/App/ooo.rc oowriter
+# ------------------------------------------------------------------------------
+
+include "../gtkrc"
+
+style "ooo-menu"
+{
+	xthickness	= 0
+	ythickness	= 0
+
+	bg[NORMAL]			= shade (1.04, @bg_color)
+	bg[SELECTED]		= @selected_bg_color
+	bg[PRELIGHT]		= mix(0.92, shade (1.1,@bg_color), @selected_bg_color)
+	bg[ACTIVE]			= shade (0.94, @bg_color)
+	bg[INSENSITIVE]		= shade (1.06,@bg_color)
+	fg[NORMAL]			= @fg_color
+	fg[PRELIGHT]		= @selected_fg_color
+	fg[SELECTED]		= @selected_fg_color
+	fg[ACTIVE]			= @selected_fg_color
+	fg[INSENSITIVE]		= shade (0.94, @bg_color)
+	text[NORMAL]		= @text_color #checks
+	base[NORMAL]		= @base_color #checks background
+	text[PRELIGHT]		= @base_color #checks prelight
+	text[SELECTED]		= @selected_fg_color
+	text[ACTIVE]		= @selected_fg_color
+	text[INSENSITIVE]	= shade (0.94, @bg_color)
+
+	engine "murrine"
+	{
+		contrast	= 0.46
+		reliefstyle	= 0
+	}
+}
+
+style "ooo-menu-item" = "ooo-menu"
+{
+	xthickness = 3
+	ythickness = 3
+
+#	fg[PRELIGHT]	= "#000"
+
+	bg[NORMAL]		= shade (1.16,@bg_color)
+	bg[ACTIVE]		= shade (0.84,@bg_color)
+	bg[PRELIGHT]	= mix(0.93, shade (1.11,@bg_color), shade (1.04,@selected_bg_color))
+	bg[SELECTED]	= shade (1.10,@selected_bg_color)
+
+	engine "murrine"
+	{
+		menustyle			= 0
+		menuitemstyle		= 1
+		gradient_shades		= { 1.0, 0.9, 0.9, 0.8 }
+		glow_shade			= 1.0
+		contrast			= 0.46
+		glazestyle			= 0
+		highlight_shade		= 1.0
+		lightborder_shade	= 1.0
+		lightborderstyle	= 1
+		roundness			= 0
+	}
+}
+
+style "ooo-menubar" = "ooo-menu"
+{
+	xthickness	= 3
+	ythickness	= 3
+
+	bg[PRELIGHT]	= shade (1.2, @selected_bg_color)
+
+	engine "murrine"
+	{
+		menubarstyle		= 1
+		menubaritemstyle	= 1
+		gradient_shades		= { 1.00, 0.98, 0.98, 0.96 }
+		glow_shade			= 1.0
+		contrast			= 0.24
+		glazestyle			= 0
+		highlight_shade		= 1.0
+		lightborder_shade	= 1.0
+		lightborderstyle	= 0
+		roundness			= 0
+	}
+}
+
+style "ooo-scrollbar" = "theme-default"
+{
+	GtkScrollbar	::trough-border			= 2
+	GtkScrollbar	::trough-side-details	= 0
+	GtkScrollbar	::stepper-size			= 16
+	GtkScrollbar	::slider-width			= 16
+
+	GtkScrollbar	::has-backward-stepper	= 1
+	GtkScrollbar	::has-forward-stepper	= 1
+
+	fg[PRELIGHT]	= shade (0.50, @selected_bg_color)
+
+	engine "murrine"
+	{
+		gradient_shades		= {1.160,1.070,0.980,0.890}
+		contrast			= 1.0
+		glazestyle			= 0
+		highlight_shade		= 0.909090
+		glow_shade			= 1.22
+		lightborder_shade	= 1.0
+		roundness			= 1
+		scrollbarstyle		= 0
+	}
+}
+
+widget_class	"*<GtkMenu>*"		style "ooo-menu"
+widget_class	"*<GtkMenuItem>*"	style "ooo-menu-item"
+widget_class	"*<GtkMenuBar>*"	style "ooo-menubar"
+#widget_class	"*<GtkScrollbar>*"	style "ooo-scrollbar"
+
+
+
+
+
+
+
+

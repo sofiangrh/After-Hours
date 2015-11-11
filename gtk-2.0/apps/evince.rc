@@ -1,0 +1,37 @@
+# ==============================================================================
+# EVINCE SPECIFIC SETTINGS
+# ==============================================================================
+
+style "evince-main" = "theme-dark"
+{
+#	GtkScrolledWindow	::scrollbar-spacing		= 0
+#	GtkScrolledWindow	::scrollbars-within-bevel	= 1
+}
+
+style "evince-toolbar"
+{
+#	GtkToolbar	::shadow_type	= GTK_SHADOW_NONE
+
+	engine "murrine"
+	{
+		contrast	= 0.5
+	}
+}
+
+#widget	"EvWindow*"				style "evince-main"
+#widget	"EvWindow.*.MainMenu*"	style "theme-menubar"
+widget	"EvWindow.*.GtkToolbar"	style "evince-toolbar"
+#widget	"EvWindow.*utton*"		style "theme-button"
+#widget	"EvWindow.*croll?ar*"	style "theme-scrollbar"
+
+
+
+
+
+
+
+
+
+
+
+

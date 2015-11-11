@@ -1,0 +1,31 @@
+# ==============================================================================
+# LIFEREA SPECIFIC SETTINGS
+# ==============================================================================
+
+style "liferea-browsertabs"
+{
+	xthickness	= 0
+	ythickness	= 0
+}
+
+style "liferea-browsertabs-scrolled"
+{
+	GtkScrolledWindow	::scrollbar-spacing			= 1
+	GtkScrolledWindow	::scrollbars-within-bevel	= 1
+
+	xthickness	= 2
+	ythickness	= 2
+}
+
+widget	"mainwindow.vbox1.leftpane.browsertabs.GtkVBox.GtkFrame"	style "liferea-browsertabs"
+widget	"mainwindow.vbox1.leftpane.browsertabs.GtkVBox.GtkFrame.GtkScrolledWindow"	style "liferea-browsertabs-scrolled"
+
+widget	"mainwindow.vbox1.maintoolbar"	style "theme-toolbar-light"
+
+
+
+
+
+
+
+

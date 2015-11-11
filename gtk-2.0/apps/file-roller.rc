@@ -1,0 +1,59 @@
+# ==============================================================================
+# FILE ROLLER SPECIFIC SETTINGS
+# ==============================================================================
+
+style "fr-main"
+{
+	bg[NORMAL]	= @base_color
+}
+
+style "fr-splitter"
+{
+	GtkPaned	::handle_size	= 1
+
+	bg[NORMAL]		= shade (0.86, @bg_color)
+	bg[PRELIGHT]	= shade (1.08, @selected_bg_color)
+
+	engine "mist" {}
+}
+
+style "fr-paned-frame"
+{
+	bg[NORMAL]	= @base_color
+
+	engine "murrine"
+	{
+		contrast	= 0.0
+		reliefstyle	= 0
+	}
+}
+
+style "fr-statusbar"
+{
+	bg[NORMAL]	= @base_color
+
+	xthickness	= 4
+	ythickness	= 4
+}
+
+widget	"FrWindow"										style "fr-main"
+widget	"FrWindow.GtkTable.GtkHPaned.GtkVBox.GtkFrame"	style "fr-paned-frame"
+widget	"FrWindow.GtkTable.GtkHPaned"					style "fr-splitter"
+
+widget	"FrWindow.GtkTable.ToolBar"	style "theme-toolbar-light"
+
+
+widget	"FrWindow.*.GtkStatusbar*"	style "fr-statusbar"
+
+
+
+
+
+
+
+
+
+
+
+
+

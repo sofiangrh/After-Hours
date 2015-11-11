@@ -1,0 +1,74 @@
+# ==============================================================================
+# INKSAPE SPECIFIC SETTINGS
+# ==============================================================================
+
+style "inkscape-paned"
+{
+	engine "murrine"
+	{
+		contrast	= 0.0
+	}
+}
+
+style "inkscape-spvruler"
+{
+	xthickness	= 7
+}
+
+style "inkscape-gdldock"
+{
+	xthickness	= 1
+	ythickness	= 2
+}
+
+style "inkscape-spcolorwheel"
+{
+	bg[NORMAL]	= shade (1.08, @bg_color)
+
+	engine "murrine"
+	{
+		roundness	= 0
+	}
+}
+
+style "inkscape-handlebox"
+{
+	bg[NORMAL]	= shade (1.0, @bg_color)
+}
+
+style "inkscape-spwidget-frame"
+{
+	bg[NORMAL]	= shade (1.05, @bg_color)
+
+	engine "murrine"
+	{
+		contrast	= 0.0
+	}
+}
+
+widget	"*SPDesktopWidget.*GtkNotebook.SPColor*.SPColorWheel"	style "inkscape-spcolorwheel"
+widget	"*SPDesktopWidget.*GtkNotebook.SPColor*.SPColorSlider"	style "inkscape-spcolorwheel"
+
+widget	"*SPDesktopWidget.GtkVBox.GtkHBox.GtkTable.gtkmm__GtkHPaned.GtkTable.GtkEventBox.SPVRuler*"			style "inkscape-spvruler"
+widget	"*SPDesktopWidget.GtkVBox.GtkHBox.GtkTable.gtkmm__GtkHPaned.gtkmm__GtkScrolledWindow.GtkViewport"	style "inkscape-paned"
+
+widget	"*GdlDock"		style "inkscape-gdldock"
+widget	"*GdlDockItem"	style "inkscape-gdldock"
+
+
+widget	"*SPDesktopWidget.GtkVBox.GtkHBox.GtkHandleBox"	style "inkscape-handlebox"
+
+widget	"*SPDesktopWidget.*.SPWidget.*.GtkFrame"	style "inkscape-spwidget-frame"
+
+
+
+
+
+
+
+
+
+
+
+
+

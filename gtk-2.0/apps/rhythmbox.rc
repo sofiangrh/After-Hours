@@ -1,0 +1,22 @@
+# ------------------------------------------------------------------------------
+# Eye Of Gnome specific settings
+# ------------------------------------------------------------------------------
+
+style "rb-statusbar"
+{
+	RBStatusbar	::shadow_type	= GTK_SHADOW_NONE
+
+	xthickness	= 4
+	ythickness	= 4
+}
+
+style "rb-statusbar-fix"
+{
+	xthickness	= 0
+	ythickness	= 0
+}
+
+widget "*RBStatusbar*"					style "rb-statusbar"
+widget "*RBStatusbar.GtkProgressBar"	style "rb-statusbar-fix"
+
+

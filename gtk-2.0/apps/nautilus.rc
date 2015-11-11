@@ -1,0 +1,130 @@
+# ==============================================================================
+# NAUTILUS SPECIFIC SETTINGS
+# ==============================================================================
+
+style "nautilus-main"
+{
+	bg[NORMAL]	= @base_color
+}
+
+style "nautilus-main-full"
+{
+	NautilusIconContainer	::highlight_alpha	= 255
+}
+
+style "nautilus-statusbar"
+{
+	GtkStatusbar	::shadow_type	= GTK_SHADOW_OUT
+
+	xthickness	= 4
+	ythickness	= 4
+}
+
+style "nautilus-extra-view" = "theme-default"
+{
+	bg[NORMAL]	= shade (1.2, @selected_bg_color)
+	fg[NORMAL]	= @text_color
+}
+
+style "nautilus-splitter"
+{
+	GtkPaned	::handle_size	= 1
+
+	bg[NORMAL]		= shade (0.86, @bg_color)
+	bg[PRELIGHT]	= shade (1.08, @selected_bg_color)
+
+	engine "mist" {}
+}
+
+style "nautilus-sidepane-frame"
+{
+	bg[NORMAL]	= @base_color
+
+	engine "murrine"
+	{
+		contrast	= 0.0
+		reliefstyle	= 0
+	}
+}
+
+style "nautilus-notesviewer"
+{
+	xthickness	= 0
+	ythickness	= 0
+}
+
+style "nautilus-informationpanel"
+{
+	bg[NORMAL]	= @base_color
+}
+
+style "nautilus-notebook"
+{
+	xthickness	= 0
+	ythickness	= 0
+
+	bg[NORMAL]	= @base_color
+	bg[ACTIVE]	= @base_color
+
+	engine "murrine"
+	{
+		gradient_shades	= { 1.00, 1.00, 1.00, 1.00 }
+		contrast	= 0.0
+		roundness	= 0
+	}
+}
+
+style "nautilus-notebook-label"
+{
+	fg[NORMAL]	= shade (0.8, "#ff0000")
+}
+
+style "nautilus-notebook-label-fix"
+{
+	fg[NORMAL]	= @fg_color
+}
+
+widget	"NautilusNavigationWindow"					style "nautilus-main"
+widget	"NautilusNavigationWindow.*"				style "nautilus-main-full"
+widget	"NautilusNavigationWindow.*.*bar*"		style "theme-toolbar-light"
+widget	"NautilusNavigationWindow.*.Toolbar"		style "theme-toolbar"
+widget	"NautilusNavigationWindow.*.GtkStatusbar*"	style "nautilus-statusbar"
+
+widget	"NautilusNavigationWindow.*.NautilusSidePane.GtkFrame"	style "nautilus-sidepane-frame"
+widget	"NautilusNavigationWindow.*.NautilusNotesViewer"		style "nautilus-notesviewer"
+widget	"NautilusNavigationWindow.*.NautilusInformationPanel"	style "nautilus-informationpanel"
+widget	"NautilusNavigationWindow.*.NautilusEmblemSidebar.*.GtkViewport*"	style "nautilus-informationpanel"
+
+widget	"NautilusNavigationWindow.*.NautilusHorizontalSplitter"	style "nautilus-splitter"
+
+widget	"*.nautilus-extra-view-widget.*Button*.GtkLabel*"	style:highest "theme-button"
+widget	"*.nautilus-extra-view-widget"						style:highest "nautilus-extra-view"
+widget	"*.nautilus-extra-view-widget.*.GtkLabel*"			style:highest "nautilus-extra-view"
+
+#widget_class	"NautilusNavigationWindow.*.NautilusNotebook"		style "nautilus-notebook"
+widget_class	"NautilusNavigationWindow.*.NautilusHorizontalSplitter.NautilusNotebook"	style "nautilus-notebook"
+widget_class	"NautilusNavigationWindow.*.NautilusHorizontalSplitter.NautilusNotebook.*"	style "nautilus-notebook-label"
+widget_class	"NautilusNavigationWindow.*.NautilusHorizontalSplitter.NautilusNotebook*<GtkTreeView>*"				style "nautilus-notebook-label-fix"
+widget_class	"NautilusNavigationWindow.*.NautilusHorizontalSplitter.NautilusNotebook*<GtkTreeView>.<GtkButton>*"	style "nautilus-notebook-label-fix"
+widget_class	"NautilusNavigationWindow.*.NautilusHorizontalSplitter.NautilusNotebook*<GtkButton>*"				style "nautilus-notebook-label-fix"
+widget_class	"NautilusNavigationWindow.*.NautilusHorizontalSplitter.NautilusNotebook*<GtkScrollbar>*"			style "nautilus-notebook-label-fix"
+widget_class	"NautilusNavigationWindow.*.NautilusHorizontalSplitter.NautilusNotebook*FMIconContainer*"			style "nautilus-notebook-label-fix"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

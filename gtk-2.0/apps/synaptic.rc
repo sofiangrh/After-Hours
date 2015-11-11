@@ -1,0 +1,25 @@
+# ==============================================================================
+# SYNAPTIC SPECIFIC SETTINGS
+# ==============================================================================
+
+style "synaptic-statusbar"
+{
+	xthickness	= 4
+	ythickness	= 4
+
+	engine "murrine"
+	{
+		contrast	= 0.0
+	}
+}
+
+widget	"*scrolledwindow22.viewport4*"	style "synaptic-statusbar"
+
+
+
+
+
+
+
+
+
